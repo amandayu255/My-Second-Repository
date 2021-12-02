@@ -1,16 +1,30 @@
 import "./styles.css";
 
-export default function App() {
+function makeDiv(person) {
   return (
-    <div className="App">
-      <h1>Hello CodeSandbox</h1>
-      <h2>Start editing to see some magic happen!</h2>
+    <div>
+      Hello {person.name} {person.lastname}!
     </div>
   );
 }
 
-function list(item){
+export default function App() {
+  let people = [
+    { name: "victor", lastname: "lymar" },
+    { name: "traci", lastname: "sibel" }
+  ];
 
+  let divs = [];
+  for (const person of people) {
+    divs.push(makeDiv(person));
+  }
+
+  return (
+    <div className="App">
+      <h1>Hello Team</h1>
+      <h2>Start editing to see some magic happen!</h2>
+
+      {divs}
+    </div>
+  );
 }
-
-list();
