@@ -1,30 +1,44 @@
 import "./styles.css";
 
-function makeDiv(person) {
+function displayPerson(first, last, apps) {
   return (
     <div>
-      Hello {person.name} {person.lastname}!
+      Hello {first} {last}! You like {apps}.
+    </div>
+  );
+}
+
+function displayApps(one, two) {
+  return (
+    <div>
+      {one}
+      {two}!
     </div>
   );
 }
 
 export default function App() {
   let people = [
-    { name: "victor", lastname: "lymar" },
-    { name: "traci", lastname: "sibel" }
+    ["Victor", "Lymar"],
+    ["Traci", "Siebel"]
   ];
 
-  let divs = [];
-  for (const person of people) {
-    divs.push(makeDiv(person));
+  let elements = [];
+  for (let person of people) {
+    let first = person[0];
+    let last = person[1];
+    elements.push(displayPerson(first, last));
   }
 
-  return (
-    <div className="App">
-      <h1>Hello Team</h1>
-      <h2>Start editing to see some magic happen!</h2>
+  let apps = [["Instagram"], ["Tik Tok"]];
 
-      {divs}
-    </div>
-  );
+  let media = [];
+  for (let app of apps) {
+    let one = app[0];
+    let two = app[1];
+    elements.push(displayApps(app));
+  }
+
+  return <div> {elements} </div>;
+  return <div> {media} </div>;
 }
