@@ -3,8 +3,7 @@ import "./styles.css";
 function displayThings(first, last, apps, year, color) {
   return (
     <div>
-      Hello {first} {last}! You like {apps} and the color {color}. You graduate
-      in {year}. 
+      {first} {last}: likes {apps} and the color {color}; You graduate in {year}. 
     </div>
   );
 }
@@ -16,7 +15,7 @@ export default function App() {
     ["Ida", "Voong", "Instagram", 2022, "blue"],
     ["Ana", "Rivera", "Instagram", 2051, "green"],
     ["Aidan", "Fuller", "Instagram", 2023, "red"],
-    ["kyle", "wan", "Ticktok", 2023, "yeah"],
+    ["kyle", "wan", "Tiktok", 2023, "yeah"],
     ["Enjun", "Li", "Instagram", 2022, "black"],
     ["Luis", "Garcia", "Instagram", 2025, "black"],
     ["Amanda", "Yu", "Instagram", 2022, "blue"],
